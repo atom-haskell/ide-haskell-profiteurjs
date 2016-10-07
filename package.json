@@ -1,0 +1,16 @@
+{
+  "name": "ide-haskell-profiteurjs",
+  "main": "./lib/ide-haskell-profiteurjs",
+  "version": "0.0.0",
+  "description": "Show GHC profiling results in Atom",
+  "keywords": [
+    "haskell", "profiling", "profiteur", "ghc"
+  ],
+  "repository": "https://github.com/atom-haskell/ide-haskell-profiteurjs",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
