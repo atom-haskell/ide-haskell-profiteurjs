@@ -11,6 +11,7 @@ executable hs
     main-is: Main.hs
     other-modules: Foreign
     hs-source-dirs: src
+    cpp-options: -DGHCJS_BROWSER
     build-depends:
         base >=4.8 && <4.9,
         profiteur,

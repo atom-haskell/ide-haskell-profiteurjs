@@ -12,8 +12,8 @@ hs.js: hs.jsexe
 hs.min.js: hs.js
 	ccjs hs.js \
 		--compilation_level=ADVANCED_OPTIMIZATIONS \
-		--externs=node \
 		> hs.min.js
+		# --externs=node \
 
 .PHONY: clean
 clean:

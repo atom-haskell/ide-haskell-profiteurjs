@@ -20,14 +20,16 @@ import GHCJS.Marshal
 import GHCJS.Marshal.Pure
 import GHCJS.Foreign.Callback
 import GHCJS.Types
+import GHCJS.Buffer
+import JavaScript.TypedArray
 
 main :: IO ()
 main = do
-  setExport "runProfiteur" =<< asyncCallback2 (mkAsync2 runProfiteur)
+  setExport "runProfiteur" =<< asyncCallback3 (mkAsync3 runProfiteur)
 
-runProfiteur :: JSVal -> IO JSVal
-runProfiteur (pFromJSVal -> fn) = do
-  src <- readProfFile fn
+runProfiteur :: JSVal -> JSVal -> IO JSVal
+runProfiteur (pFromJSVal -> fn) (pFromJSVal -> fsrc) = do
+  let src = parseProfFile . BL.toStrict . encodeUtf8 . pack $ fsrc
   case src of
     Right p -> toJSVal . unpack . decodeUtf8 $ htmlReportPure fn p
     Left err -> toJSVal $ "<div class='error'>" ++ err ++ "</div>"
