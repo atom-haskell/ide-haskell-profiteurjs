@@ -1,4 +1,4 @@
-# ide-haskell-profiteurjs package
+# ide-haskell-profiteurjs package ![](https://david-dm.org/atom-haskell/ide-haskell-profiteurjs.svg)
 
 Shows [Profiteur](https://github.com/jaspervdj/profiteur/) output in Atom.
 
