@@ -14,7 +14,9 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "^1.8.1"
+  },
   "devDependencies": {
     "@types/atom": "^1.22.4",
     "atom-haskell-tslint-rules": "^0.1.1",
