@@ -2,7 +2,7 @@ import { BufferedProcess, BufferedNodeProcess } from 'atom'
 import { sep } from 'path'
 
 async function runProfiteur(uri: string): Promise<string> {
-  let cmd: string | undefined = atom.config.get('ide-haskell-profiteurjs.profiteurPath')
+  let cmd = atom.config.get('ide-haskell-profiteurjs.profiteurPath')
   if (!cmd) throw new Error('No profiteur path set!')
   let BP: typeof BufferedProcess
   if (cmd === 'profiteur.js') {
