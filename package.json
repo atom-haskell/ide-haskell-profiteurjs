@@ -9,19 +9,28 @@
     "profiteur",
     "ghc"
   ],
+  "scripts": {
+    "build": "tsc -p .",
+    "prettier": "prettier --write 'src/**/*.ts?(x)'",
+    "prettier-check": "prettier -l 'src/**/*.ts'",
+    "typecheck": "tsc --noEmit -p .",
+    "lint": "tslint --project .",
+    "test": "npm run typecheck && npm run lint && npm run prettier-check"
+  },
   "repository": "https://github.com/atom-haskell/ide-haskell-profiteurjs",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.25.0 <2.0.0"
   },
   "dependencies": {
     "@atom-haskell/profiteur-js": "0.0.1",
-    "tslib": "^1.8.1"
+    "tslib": "^1.9.0"
   },
   "devDependencies": {
-    "@types/atom": "^1.22.4",
-    "atom-haskell-tslint-rules": "^0.1.1",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
+    "@types/atom": "~1.25.0",
+    "atom-haskell-tslint-rules": "^0.2.2",
+    "prettier": "^1.11.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.1"
   }
 }

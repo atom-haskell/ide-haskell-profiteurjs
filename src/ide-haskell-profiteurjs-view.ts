@@ -48,8 +48,8 @@ export class IdeHaskellProfiteurjsView {
     report.style.height = '100%'
     this.element.appendChild(report)
     runProfiteur(uri)
-    .then(html => report.src = 'data:text/html;base64,' + btoa(html))
-    .catch(err => atom.notifications.addError(err.toString()))
+      .then((html) => (report.src = 'data:text/html;base64,' + btoa(html)))
+      .catch((err) => atom.notifications.addError(err.toString()))
   }
 
   public getURI() {
@@ -63,5 +63,4 @@ export class IdeHaskellProfiteurjsView {
   public destroy() {
     this.element.remove()
   }
-
 }
