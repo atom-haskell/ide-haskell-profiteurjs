@@ -15,6 +15,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "@atom-haskell/profiteur-js": "0.0.1",
     "tslib": "^1.8.1"
   },
   "devDependencies": {
