@@ -23,7 +23,7 @@
     "atom": ">=1.25.0 <2.0.0"
   },
   "dependencies": {
-    "@atom-haskell/profiteur-js": "0.0.1",
+    "@atom-haskell/profiteur-js": "0.0.2",
     "tslib": "^1.9.0"
   },
   "devDependencies": {
