@@ -1,3 +1,9 @@
+## 0.1.1
+
+-   Bump profiteur version
+-   Prettier, bump dependencies, typed config
+-   Use npm-published profiteur "binary"
+
 ## 0.1.0
 * Updated profiteur
 * Profiteur bundled as a nodejs "binary"
